@@ -5,34 +5,43 @@ const { Tiles3DLoader } = require('@loaders.gl/3d-tiles');
 const { WebMercatorViewport } = require('@deck.gl/core');
 const { writeFile } = require('fs/promises');
 var fs = require('fs');
+const minimist = require('minimist');
+
+const args = minimist(process.argv.slice(2), {
+  float: ['latitude', 'longitude'],
+  int: ['screenSpaceError', 'width', 'height', 'zoom'],
+  string: ['output_path'],
+  default: {
+    latitude: 53.343318,
+    longitude: -2.650661,
+    screenSpaceError: 2,
+    width: 230,
+    height: 175,
+    zoom: 19,
+  }
+});
+console.log("args:", args);
 
 async function run() {
-  const latitude = parseFloat(process.argv[2])
-  const longitude = parseFloat(process.argv[3])
-  const output_path = process.argv[4]
-  if (isNaN(latitude) || isNaN(longitude) || (!output_path)) {
-    console.error('❗️ usage: node fetch-tiles latitude longitude output_path');
-    process.exit(1);
-  }
-  console.log(`fetch-tiles: (lat:${latitude},lon=${longitude}) -> ${output_path}`);
+  console.log(`🌀  fetch-tiles: (lat:${args.latitude},lon=${args.longitude}) -zoom=${args.zoom}-${args.height}x${args.width}-error:${args.screenSpaceError}-> ${args.output_path}`);
 
   // https://stackoverflow.com/a/26815894/17619982
-  if (!fs.existsSync(output_path)) {
-    fs.mkdirSync(output_path, { recursive: true });
-    console.log(`created ${output_path}`);
+  if (!fs.existsSync(args.output_path)) {
+    fs.mkdirSync(args.output_path, { recursive: true });
+    console.log(`created ${args.output_path}`);
   }
 
   // Get your key:
   // https://developers.google.com/maps/documentation/tile/3d-tiles
   const GOOGLE_API_KEY = process.env.GOOGLE_MAPS_API_KEY
   const tilesetUrl = 'https://tile.googleapis.com/v1/3dtiles/root.json?key=' + GOOGLE_API_KEY;
-  const screenSpaceError = 1
+
   const viewport = new WebMercatorViewport({
-    width: 600,
-    height: 400,
-    latitude: latitude,
-    longitude: longitude,
-    zoom: 16
+    width: args.width,
+    height: args.height,
+    latitude: args.latitude,
+    longitude: args.longitude,
+    zoom: args.zoom
   });
 
   console.log("Fetching tileset...")
@@ -43,8 +52,9 @@ async function run() {
     loadOptions: {
       '3d-tiles': { loadGLTF: false },
     },
-    maximumScreenSpaceError: screenSpaceError
+    maximumScreenSpaceError: args.screenSpaceError
   })
+
   console.log("Traversing....")
   let currentTilesLoadedNum = 0
   // Traverse until we've loaded all the tiles for the given viewport & screen space error threshold
@@ -74,7 +84,7 @@ async function run() {
     }
     const arrayBuffer = await response.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
-    await writeFile(`${output_path}/${i}.glb`, buffer);
+    await writeFile(`${args.output_path}/${i}.glb`, buffer);
   }
 
   // TODO: these glTF's are in ECEF coordinates
