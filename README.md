@@ -1,6 +1,6 @@
 # Google Earth as glTF models
 
-An [abcli](https://github.com/kamangir/awesome-bash-cli) fork of [google-earth-as-gltf](https://github.com/OmarShehata/google-earth-as-gltf), through [roofai](https://github.com/kamangir/roofAI).
+An [abcli](https://github.com/kamangir/awesome-bash-cli) fork of [google-earth-as-gltf](https://github.com/OmarShehata/google-earth-as-gltf), through [roofai](https://github.com/kamangir/roofAI) ([diff](https://github.com/OmarShehata/google-earth-as-gltf/pull/8)).
 
 ```bash
 pip install roofai
@@ -70,4 +70,4 @@ Screen space error is a concept defined in the 3D Tiles specification, see: http
 
 [![pylint](https://github.com/kamangir/roofai/actions/workflows/pylint.yml/badge.svg)](https://github.com/kamangir/roofai/actions/workflows/pylint.yml) [![pytest](https://github.com/kamangir/roofai/actions/workflows/pytest.yml/badge.svg)](https://github.com/kamangir/roofai/actions/workflows/pytest.yml) [![bashtest](https://github.com/kamangir/roofai/actions/workflows/bashtest.yml/badge.svg)](https://github.com/kamangir/roofai/actions/workflows/bashtest.yml) [![PyPI version](https://img.shields.io/pypi/v/roofai.svg)](https://pypi.org/project/roofai/) [![PyPI - Downloads](https://img.shields.io/pypi/dd/roofai)](https://pypistats.org/packages/roofai)
 
-built by 🌀 [`blue_options-4.223.1`](https://github.com/kamangir/awesome-bash-cli), based on 🏛️ [`roofai-6.295.1`](https://github.com/kamangir/roofai).
+built by 🌀 [`blue_options-4.223.1`](https://github.com/kamangir/awesome-bash-cli), based on 🏛️ [`roofai-6.296.1`](https://github.com/kamangir/roofai).
