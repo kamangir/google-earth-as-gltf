@@ -15,6 +15,8 @@ pip install roofai
  . browse google earth tools.
 ```
 
+🔗  https://kamangir.github.io/google-earth-as-gltf/
+
 ## fetch
 
 ```bash

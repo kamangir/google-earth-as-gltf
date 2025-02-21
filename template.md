@@ -10,6 +10,8 @@ pip install roofai
 
 --help-- roofai google_earth browse
 
+🔗  https://kamangir.github.io/google-earth-as-gltf/
+
 ## fetch
 
 --help-- roofai google_earth fetch
