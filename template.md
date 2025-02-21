@@ -1,6 +1,6 @@
 # Google Earth as glTF models
 
-An [abcli](https://github.com/kamangir/awesome-bash-cli) fork of [google-earth-as-gltf](https://github.com/OmarShehata/google-earth-as-gltf), through [roofai](https://github.com/kamangir/roofAI).
+An [abcli](https://github.com/kamangir/awesome-bash-cli) fork of [google-earth-as-gltf](https://github.com/OmarShehata/google-earth-as-gltf), through [roofai](https://github.com/kamangir/roofAI) ([diff](https://github.com/OmarShehata/google-earth-as-gltf/pull/8)).
 
 ```bash
 pip install roofai
