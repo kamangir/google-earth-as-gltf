@@ -8,28 +8,11 @@ pip install roofai
 
 ## browse
 
-```bash
-@google_earth \
-	browse \
-	[dev,dryrun,sandbox]
- . browse google earth tools.
-```
+--help-- roofai google_earth browse
 
 ## fetch
 
-```bash
-@google_earth \
-	fetch \
-	[dryrun,install,upload] \
-	[-|<object-name>] \
-	[--latitude=<49.279802>] \
-	[--longitude=<-123.115660>] \
-	[--screenSpaceError=<2>] \
-	[--width=<230>] \
-	[--height=<175>] \
-	[--zoom=<19>]
- . fetch from google earth.
-```
+--help-- roofai google_earth fetch
 
 ## Legacy [README](https://github.com/OmarShehata/google-earth-as-gltf)
 
@@ -59,4 +42,3 @@ Screen space error is a concept defined in the 3D Tiles specification, see: http
 
 - `npm install`
 - `npm run dev`
-
