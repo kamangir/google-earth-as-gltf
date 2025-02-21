@@ -8,28 +8,11 @@ pip install roofai
 
 ## browse
 
-```bash
-@google_earth \
-	browse \
-	[dev,sandbox]
- . browse google earth tools.
-```
+--help-- roofai google_earth browse
 
 ## fetch
 
-```bash
-@google_earth \
-	fetch \
-	[dryrun,install,upload] \
-	[-|<object-name>] \
-	[--latitude=<49.279802>] \
-	[--longitude=<-123.115660>] \
-	[--screenSpaceError=<2>] \
-	[--width=<230>] \
-	[--height=<175>] \
-	[--zoom=<19>]
- . fetch from google earth.
-```
+--help-- roofai google_earth fetch
 
 <details>
 <summary>Legacy README</summary>
@@ -65,7 +48,4 @@ Screen space error is a concept defined in the 3D Tiles specification, see: http
 
 ---
 
-
-[![pylint](https://github.com/kamangir/roofai/actions/workflows/pylint.yml/badge.svg)](https://github.com/kamangir/roofai/actions/workflows/pylint.yml) [![pytest](https://github.com/kamangir/roofai/actions/workflows/pytest.yml/badge.svg)](https://github.com/kamangir/roofai/actions/workflows/pytest.yml) [![bashtest](https://github.com/kamangir/roofai/actions/workflows/bashtest.yml/badge.svg)](https://github.com/kamangir/roofai/actions/workflows/bashtest.yml) [![PyPI version](https://img.shields.io/pypi/v/roofai.svg)](https://pypi.org/project/roofai/) [![PyPI - Downloads](https://img.shields.io/pypi/dd/roofai)](https://pypistats.org/packages/roofai)
-
-built by 🌀 [`blue_options-4.223.1`](https://github.com/kamangir/awesome-bash-cli), based on 🏛️ [`roofai-6.291.1`](https://github.com/kamangir/roofai).
+--signature--
