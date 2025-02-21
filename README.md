@@ -31,7 +31,8 @@ pip install roofai
  . fetch from google earth.
 ```
 
-## Legacy [README](https://github.com/OmarShehata/google-earth-as-gltf)
+<details>
+<summary>Legacy README</summary>
 
 A little web app to demonstrate (1) how to fetch 3D Tiles from the [Google Photorealistic API](https://developers.google.com/maps/documentation/tile/3d-tiles) and (2) how to correctly normalize & rotate the glTF tiles, or combine a set of them into one glTF that can be rendered in any standard engine.
 
@@ -60,3 +61,4 @@ Screen space error is a concept defined in the 3D Tiles specification, see: http
 - `npm install`
 - `npm run dev`
 
+</details>
