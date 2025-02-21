@@ -11,7 +11,7 @@ pip install roofai
 ```bash
 @google_earth \
 	browse \
-	[dev,dryrun,sandbox]
+	[dev,sandbox]
  . browse google earth tools.
 ```
 
