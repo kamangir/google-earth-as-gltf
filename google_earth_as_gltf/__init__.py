@@ -4,7 +4,7 @@ ICON = "🌀"
 
 DESCRIPTION = f"{ICON} Google Earth as glTF."
 
-VERSION = "5.23.1"
+VERSION = "5.24.1"
 
 REPO_NAME = "google-earth-as-gltf"
 
